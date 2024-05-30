@@ -3,8 +3,11 @@
 In this homework, we're going to work with categorical variables, first ML models (Decision Trees), and hyperparameter tuning.
 
 Please use the [Colab Module 3](https://github.com/DataTalksClub/stock-markets-analytics-zoomcamp/blob/main/03-modeling/Module_3_Colab_Time_Series_Modeling.ipynb) for all tasks to ensure you have the same dataframe used for the Modeling part, as covered during the lecture. 
-We suggest copying and extending it (around "TODO" comments). 
+We suggest copying and extending it (around "TODO" comments).
 
+**HINT**: If you want to avoid data truncation in GitHub's UI, try either of the following options:
+* Open the notebook in [Colab, using the GitHub link to the notebook](https://colab.research.google.com/github/DataTalksClub/stock-markets-analytics-zoomcamp/blob/main/03-modeling/Module_3_Colab_Time_Series_Modeling.ipynb).
+* Clone the repository to a local folder and open the notebook in Jupyter Notebook.
 ---
 ### Question 1 (1 point): Dummies on Month and Week-of-Month
 
@@ -65,7 +68,7 @@ NOTE: please include `random_state=42` to Decision Tree Classifier init function
 
 Follow these steps to find the optimal `max_depth`:
 * Iterate through `max_depth` values from 1 to 20.
-* Train the Decision Tree Classifier with the current `max_depth` parameter.
+* Train the Decision Tree Classifier with the current `max_depth` parameter on TRAIN+VALIDATION set.
 * Optionally, visualize how the 'head' of each fitted tree changes with more advanced (=deep) trees. You can use the [`sklearn.tree.plot_tree()`](https://scikit-learn.org/stable/modules/generated/sklearn.tree.plot_tree.html) function, or the compact way  with the `export_text()` functionality ([Stack Overflow example](https://stackoverflow.com/questions/20156951/how-do-i-find-which-attributes-my-tree-splits-on-when-using-scikit-learn)):
   ```
   from sklearn.tree import export_text
